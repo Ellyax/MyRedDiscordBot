@@ -531,7 +531,7 @@ class Economy:
     @commands.command(pass_context=True, no_pm=True)
     async def slot(self, ctx, bid: int):
         """Play the slot machine"""
-        author = ctx.message.author
+        """author = ctx.message.author
         server = author.server
         settings = self.settings[server.id]
         valid_bid = settings["SLOT_MIN"] <= bid and bid <= settings["SLOT_MAX"]
@@ -561,6 +561,8 @@ class Economy:
             await self.bot.say("Bid must be between {} and {}."
                                "".format(settings["SLOT_MIN"],
                                          settings["SLOT_MAX"]))
+		"""
+        await self.bot.say("Ferme ta gueule Franco omg")
 
     async def slot_machine(self, author, bid):
         default_reel = deque(SMReel)
